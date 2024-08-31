@@ -7,6 +7,8 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import EmployeeComponent from "./components/EmployeeComponent";
 import ListDepartmentComponent from "./components/ListDepartmentComponent";
 import DepartmentComponent from "./components/DepartmentComponent";
+import ListTodoComponent from "./components/ListTodoComponent";
+import TodoComponent from "./components/TodoComponent";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
           <Route path='/departments' element={<ListDepartmentComponent/>}></Route>
           <Route path='/add-department' element={<DepartmentComponent/>}></Route>
           <Route path='/edit-department/:id' element={<DepartmentComponent/>}></Route>
+          <Route path='/todos' element={<ListTodoComponent/>}></Route>
+          <Route path='/add-todo' element={<TodoComponent/>}></Route>
+          <Route path='/update-todo/:id' element={<TodoComponent/>}></Route>
         </Routes>
         <FooterComponent />
       </BrowserRouter>

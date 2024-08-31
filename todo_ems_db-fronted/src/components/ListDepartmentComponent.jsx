@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { deleteDepartment, getAllDepartments } from "../services/DepartmentService";
-import { Link, useNavigate } from "react-router-dom";
+import {getAllDepartments } from "../services/DepartmentService";
+import {useNavigate, useParams } from "react-router-dom";
 
 const ListDepartmentComponent = () => {
   const [departments, setDepartments] = useState([]);
-
   const navigator =  useNavigate();
 
   useEffect(() => {
